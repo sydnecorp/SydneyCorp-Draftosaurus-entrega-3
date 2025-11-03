@@ -11,7 +11,6 @@
   <!-- estilos propios -->
   <link rel="stylesheet" href="presentacion/css/estilo.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
-  <!-- AJUSTÁ el nombre de carpeta si no es DRAFTOSAURUS -->
   <base href="/draftosaurus/">
 
 </head>

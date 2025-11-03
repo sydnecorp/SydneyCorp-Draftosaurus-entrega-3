@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $msg = "Email inválido.";
   } else {
-    // verificar email existente (consulta preparada)
+    // verificar email existente 
     $stmt = $conn->prepare("SELECT 1 FROM usuarios WHERE email=? LIMIT 1");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -25,9 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($existe) {
       $msg = "Ese email ya está registrado.";
     } else {
-      // insertar (consulta preparada)
+      // insertar 
       $stmt = $conn->prepare("INSERT INTO usuarios (nombre, email, contrasena) VALUES (?, ?, ?)");
-      $stmt->bind_param("sss", $nombre, $email, $pass); // sin hash, como estás usando
+      $stmt->bind_param("sss", $nombre, $email, $pass); 
       if ($stmt->execute()) {
         $msg = "Registro OK. Ahora iniciá sesión.";
       } else {

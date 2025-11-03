@@ -21,11 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($res->num_rows === 1) {
       $u = $res->fetch_assoc();
-      if ($pass === $u["contrasena"]) { // sin hash (simple)
+      if ($pass === $u["contrasena"]) { 
         $_SESSION["usuario_id"] = (int)$u["usuario_id"];
         $_SESSION["nombre"]     = $u["nombre"];
 
-        // 🔹 Redirección absoluta al index principal
+        // Redirección absoluta al index principal
         header("Location: /draftosaurus/index.php");
         exit;
       } else {
