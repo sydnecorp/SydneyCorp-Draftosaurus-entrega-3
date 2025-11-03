@@ -1,0 +1,43 @@
+/* Fondo y layout */
+body{
+  background-image:url(../../imagenes/parke2.jpg);
+  background-size:cover; background-position:center;
+  background-attachment:fixed;
+  min-height:100vh; margin:0; display:flex; flex-direction:column;
+}
+main{ flex:1; }
+
+/* Título */
+h1{ color:#fff; font-weight:700; }
+
+/* Tabla dark legible */
+.table-dark th,.table-dark td{ vertical-align:middle; }
+
+/* -------- Modo "tarjetas" en móviles -------- */
+@media (max-width:576px){
+  .table-responsive{ border:0; }
+  table.table{ border:0; }
+  table.table thead{ 
+    border:0;
+    clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;
+  }
+  table.table tbody tr{
+    display:block; margin-bottom:1rem; background:#212529; border-radius:.75rem;
+    box-shadow:0 6px 18px rgba(0,0,0,.2); overflow:hidden;
+  }
+  table.table tbody td{
+    display:flex; justify-content:space-between; gap:1rem;
+    padding:.85rem 1rem; border:0; color:#f8f9fa;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  table.table tbody td:last-child{ border-bottom:0; }
+  table.table tbody td::before{
+    content:attr(data-label);
+    font-weight:600; color:#adb5bd;
+  }
+  /* Botón volver full width */
+  .btn-back{ width:100%; }
+}
+
+/* Footer */
+footer{ background:#195e83; color:#fff; text-align:center; padding:10px; }
