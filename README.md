@@ -59,6 +59,8 @@ Clonar este repositorio dentro de la carpeta htdocs/:
 
 git clone https://github.com/sydnecorp/SydneyCorp-Draftosaurus-entrega-3.git
 
+despues de clonar cambiar el nombre de la carpeta a draftosaurus
+
 
 Importar la base de datos en phpMyAdmin usando el archivo:
 
